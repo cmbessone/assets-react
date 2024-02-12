@@ -1,0 +1,112 @@
+body{
+  background-image: url(background-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+
+.desplegable{
+  background: #1e1e1e;
+}
+
+.barras{
+  background: #1e1e1e;
+  display: block;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+li{
+
+  list-style: none;
+}
+
+nav a{
+  color:white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 10px;
+  display: block;
+}
+
+ul li a:hover{
+  background: #ff5722;
+}
+
+/*configuracion para tablet*/
+@media(max-width: 850px){
+  .barras{
+    background: #1e1e1e;
+    display: block;
+  }
+  .desplegable{
+    transform: translate(-100%);
+    transition: 0.5s;
+    font-size: 1.5rem;
+    width: 50%;
+    background: rgba(red,green,blue,alpha);
+  }
+  ul{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button{
+  margin: 10px;
+  border: none;
+}
+li a{
+  padding: 20px;
+  display: block;
+  text-align: left ;
+}
+
+.boton_menu{
+  background-image: url('icono_menu.png');
+  background-color: #1e1e1e;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  background-size: 30px;
+  background-position: center;
+
+}
+  /*con esta clase abro y cierro el menu*/
+  .abrir_menu{
+    transform: translate(0%);
+    transition: 0.5s;
+    width: 50%;
+    background: rgba(30,30,30,0.6) ;
+    backdrop-filter: blur(2px);
+  }
+  /*con esta clase cambio barras por una X*/
+  .colocar_x{
+    background-image: url('./icono_x.png');
+    background-color: #1e1e1e;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-size: 30px;
+    background-position: center;
+  }
+}
+@media(max-width: 500px){
+  .desplegable{
+    width: 100%;
+    font-size: 1.6rem;
+  }
+}
